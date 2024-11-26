@@ -33,7 +33,7 @@ import com.example.inventory.R
 import com.example.inventory.ui.navigation.NavigationDestination
 import rgm34406697.example.InventoryTopAppBar
 import rgm34406697.example.appromm34406697.ui.AppViewModelProvider
-import rgm34406697.example.appromm34406697.ui.theme.InventoryTheme
+import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme
 
 object ItemEditDestination : NavigationDestination {
     override val route = "item_edit"
@@ -78,7 +78,7 @@ fun ItemEditScreen(
 @Preview(showBackground = true)
 @Composable
 fun ItemEditScreenPreview() {
-    InventoryTheme {
+    AppRomm34406697Theme {
         ItemEditScreen(navigateBack = { /*Do nothing*/ }, onNavigateUp = { /*Do nothing*/ })
     }
 }

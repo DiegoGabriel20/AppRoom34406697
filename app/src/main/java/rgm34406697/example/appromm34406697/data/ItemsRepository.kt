@@ -33,15 +33,22 @@ interface ItemsRepository {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(item: Item)
+    suspend fun insertItem(item: Item)
 
     @Update
     suspend fun update(item: Item)
+    suspend fun updateItem(item: Item)
 
     @Delete
     suspend fun delete(item: Item)
+    suspend fun deleteItem(item: Item)
+
 
     @Query("SELECT * from items WHERE id = :id")
     fun getItem(id: Int): Flow<Item>
+    fun getAllItemsStream(): Flow<List<Item>>
+    fun getItemStream(id: Int): Flow<Item?>
+
 
 
 }

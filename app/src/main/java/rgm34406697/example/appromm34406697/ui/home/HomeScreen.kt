@@ -47,12 +47,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.inventory.InventoryTopAppBar
 import com.example.inventory.R
 import com.example.inventory.data.Item
 import com.example.inventory.ui.item.formatedPrice
 import com.example.inventory.ui.navigation.NavigationDestination
-import com.example.inventory.ui.theme.InventoryTheme
+import rgm34406697.example.InventoryTopAppBar
+import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme
 
 object HomeDestination : NavigationDestination {
     override val route = "home"
@@ -187,7 +187,7 @@ private fun InventoryItem(
 @Preview(showBackground = true)
 @Composable
 fun HomeBodyPreview() {
-    InventoryTheme {
+    AppRomm34406697Theme {
         HomeBody(listOf(
             Item(1, "Game", 100.0, 20), Item(2, "Pen", 200.0, 30), Item(3, "TV", 300.0, 50)
         ), onItemClick = {})
@@ -197,7 +197,7 @@ fun HomeBodyPreview() {
 @Preview(showBackground = true)
 @Composable
 fun HomeBodyEmptyListPreview() {
-    InventoryTheme {
+    AppRomm34406697Theme {
         HomeBody(listOf(), onItemClick = {})
     }
 }
@@ -205,7 +205,7 @@ fun HomeBodyEmptyListPreview() {
 @Preview(showBackground = true)
 @Composable
 fun InventoryItemPreview() {
-    InventoryTheme {
+    AppRomm34406697Theme {
         InventoryItem(
             Item(1, "Game", 100.0, 20),
         )

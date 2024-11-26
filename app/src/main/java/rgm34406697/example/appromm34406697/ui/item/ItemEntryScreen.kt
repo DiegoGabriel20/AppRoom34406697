@@ -44,7 +44,7 @@ import com.example.inventory.R
 import com.example.inventory.ui.navigation.NavigationDestination
 import rgm34406697.example.InventoryTopAppBar
 import rgm34406697.example.appromm34406697.ui.AppViewModelProvider
-import rgm34406697.example.appromm34406697.ui.theme.InventoryTheme
+import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme
 import java.util.Currency
 import java.util.Locale
 
@@ -178,7 +178,7 @@ fun ItemInputForm(
 @Preview(showBackground = true)
 @Composable
 private fun ItemEntryScreenPreview() {
-    InventoryTheme {
+    AppRomm34406697Theme {
         ItemEntryBody(itemUiState = ItemUiState(
             ItemDetails(
                 name = "Item name", price = "10.00", quantity = "5"
