@@ -1,8 +1,11 @@
-package com.example.inventory.data
+package rgm34406697.example.appromm34406697.data
 
 import kotlinx.coroutines.flow.Flow
+import rgm34406697.example.appromm34406697.data.Item
+import rgm34406697.example.appromm34406697.data.ItemDao
+import rgm34406697.example.appromm34406697.data.ItemsRepository
 
- class OfflineItemsRepository(private val itemDao: ItemDao) : ItemsRepository {
+class OfflineItemsRepository(private val itemDao: ItemDao) : ItemsRepository {
 
     // Retorna o fluxo de todos os itens
     override fun getAllItemsStream(): Flow<List<Item>> = itemDao.getAllItems()

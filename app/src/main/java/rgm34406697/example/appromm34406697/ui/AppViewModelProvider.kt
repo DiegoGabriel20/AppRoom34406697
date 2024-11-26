@@ -22,11 +22,11 @@ import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import com.example.inventory.ui.home.HomeViewModel
-import com.example.inventory.ui.item.ItemDetailsViewModel
-import com.example.inventory.ui.item.ItemEditViewModel
-import com.example.inventory.ui.item.ItemEntryViewModel
-import rgm34406697.example.InventoryApplication
+import rgm34406697.example.appromm34406697.ui.home.HomeViewModel
+import rgm34406697.example.appromm34406697.ui.item.ItemDetailsViewModel
+import rgm34406697.example.appromm34406697.ui.item.ItemEditViewModel
+import rgm34406697.example.appromm34406697.ui.item.ItemEntryViewModel
+import rgm34406697.InventoryApplication
 
 /**
  * Provides Factory to create instance of ViewModel for the entire Inventory app

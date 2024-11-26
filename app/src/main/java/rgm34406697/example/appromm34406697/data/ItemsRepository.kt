@@ -1,6 +1,7 @@
-package com.example.inventory.data
+package rgm34406697.example.appromm34406697.data
 
 import kotlinx.coroutines.flow.Flow
+import rgm34406697.example.appromm34406697.data.Item
 
 /**
  * Repository interface for accessing and manipulating items.

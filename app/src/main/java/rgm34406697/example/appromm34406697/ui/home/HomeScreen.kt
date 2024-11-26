@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.inventory.ui.home
+package rgm34406697.example.appromm34406697.ui.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -48,8 +48,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.inventory.R
-import com.example.inventory.data.Item
-import com.example.inventory.ui.item.formatedPrice
+import rgm34406697.example.appromm34406697.data.Item
+import rgm34406697.example.appromm34406697.ui.item.formatedPrice
 import com.example.inventory.ui.navigation.NavigationDestination
 import rgm34406697.example.InventoryTopAppBar
 import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme

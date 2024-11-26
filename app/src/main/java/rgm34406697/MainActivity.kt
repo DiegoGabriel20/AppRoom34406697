@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package rgm34406697.example
+package rgm34406697
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import rgm34406697.example.InventoryApp
 import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme
 
 class MainActivity : ComponentActivity() {

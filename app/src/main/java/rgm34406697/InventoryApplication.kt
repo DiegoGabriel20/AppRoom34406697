@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package rgm34406697.example
+package rgm34406697
 
 import android.app.Application
-import com.example.inventory.data.AppContainer
-import com.example.inventory.data.AppDataContainer
+import rgm34406697.example.appromm34406697.data.AppContainer
+import rgm34406697.example.appromm34406697.data.AppDataContainer
 
 class InventoryApplication : Application() {
 

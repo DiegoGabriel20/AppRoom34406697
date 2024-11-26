@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.inventory.ui.item
+package rgm34406697.example.appromm34406697.ui.item
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
@@ -53,7 +53,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.inventory.R
-import com.example.inventory.data.Item
+import rgm34406697.example.appromm34406697.data.Item
 import com.example.inventory.ui.navigation.NavigationDestination
 import rgm34406697.example.InventoryTopAppBar
 import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme

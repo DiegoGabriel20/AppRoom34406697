@@ -54,6 +54,7 @@ dependencies {
     // Import the Compose BOM
 
     //Room
+    implementation("androidx.compose.material3:material3:1.2.0") // Certifique-se de usar uma versão atual
     implementation("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
     ksp("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
     implementation("androidx.room:room-ktx:${rootProject.extra["room_version"]}")

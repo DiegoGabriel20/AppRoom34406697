@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.inventory.ui.item
+package rgm34406697.example.appromm34406697.ui.item
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.example.inventory.data.ItemsRepository
+import rgm34406697.example.appromm34406697.data.ItemsRepository
 
 /**
  * ViewModel to retrieve, update and delete an item from the [ItemsRepository]'s data source.
