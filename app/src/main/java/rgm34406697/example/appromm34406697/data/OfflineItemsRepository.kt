@@ -1,9 +1,6 @@
 package rgm34406697.example.appromm34406697.data
 
 import kotlinx.coroutines.flow.Flow
-import rgm34406697.example.appromm34406697.data.Item
-import rgm34406697.example.appromm34406697.data.ItemDao
-import rgm34406697.example.appromm34406697.data.ItemsRepository
 
 class OfflineItemsRepository(private val itemDao: ItemDao) : ItemsRepository {
 
