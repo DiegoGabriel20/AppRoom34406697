@@ -27,13 +27,11 @@ import java.text.NumberFormat
 /**
  * ViewModel to validate and insert items in the Room database.
  */
+/**
+ * ViewModel to validate and insert items in the Room database.
+ */
 class ItemEntryViewModel(private val itemsRepository: ItemsRepository) : ViewModel() {
 
-    suspend fun saveItem() {
-        if (validateInput()) {
-            itemsRepository.insertItem(itemUiState.itemDetails.toItem())
-        }
-    }
     /**
      * Holds current item ui state
      */
@@ -46,8 +44,16 @@ class ItemEntryViewModel(private val itemsRepository: ItemsRepository) : ViewMod
      */
     fun updateUiState(itemDetails: ItemDetails) {
         itemUiState =
-            ItemUiState(itemDetails = itemDetails,
-                isEntryValid = validateInput(itemDetails))
+            ItemUiState(itemDetails = itemDetails, isEntryValid = validateInput(itemDetails))
+    }
+
+    /**
+     * Inserts an [Item] in the Room database
+     */
+    suspend fun saveItem() {
+        if (validateInput()) {
+            itemsRepository.insertItem(itemUiState.itemDetails.toItem())
+        }
     }
 
     private fun validateInput(uiState: ItemDetails = itemUiState.itemDetails): Boolean {
@@ -73,9 +79,9 @@ data class ItemDetails(
 )
 
 /**
- * Extension function to convert [ItemDetails] to [Item]. If the value of [ItemDetails.price] is
+ * Extension function to convert [ItemUiState] to [Item]. If the value of [ItemDetails.price] is
  * not a valid [Double], then the price will be set to 0.0. Similarly if the value of
- * [ItemDetails.quantity] is not a valid [Int], then the quantity will be set to 0
+ * [ItemUiState] is not a valid [Int], then the quantity will be set to 0
  */
 fun ItemDetails.toItem(): Item = Item(
     id = id,

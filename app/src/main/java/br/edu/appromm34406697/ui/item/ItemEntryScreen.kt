@@ -41,12 +41,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.inventory.R
 import com.example.inventory.ui.navigation.NavigationDestination
 import kotlinx.coroutines.launch
 import br.edu.InventoryTopAppBar
 import br.edu.appromm34406697.ui.AppViewModelProvider
 import br.edu.appromm34406697.ui.theme.AppRomm34406697Theme
+import com.example.AppRomm34406697.R
 import java.util.Currency
 import java.util.Locale
 

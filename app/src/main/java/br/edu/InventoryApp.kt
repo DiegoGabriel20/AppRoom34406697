@@ -31,7 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.inventory.R.string
+import com.example.AppRomm34406697.R
 import com.example.inventory.ui.navigation.InventoryNavHost
 
 /**
@@ -63,7 +63,7 @@ fun InventoryTopAppBar(
                 IconButton(onClick = navigateUp) {
                     Icon(
                         imageVector = Filled.ArrowBack,
-                        contentDescription = stringResource(string.back_button)
+                        contentDescription = stringResource(R.string.back_button)
                     )
                 }
             }

@@ -36,7 +36,8 @@ object AppViewModelProvider {
         // Initializer for ItemEditViewModel
         initializer {
             ItemEditViewModel(
-                this.createSavedStateHandle()
+                this.createSavedStateHandle(),
+                inventoryApplication().container.itemsRepository
             )
         }
         // Initializer for ItemEntryViewModel
@@ -47,13 +48,14 @@ object AppViewModelProvider {
         // Initializer for ItemDetailsViewModel
         initializer {
             ItemDetailsViewModel(
-                this.createSavedStateHandle()
+                this.createSavedStateHandle(),
+                inventoryApplication().container.itemsRepository
             )
         }
 
         // Initializer for HomeViewModel
         initializer {
-            HomeViewModel()
+            HomeViewModel(inventoryApplication().container.itemsRepository)
         }
     }
 }
@@ -62,5 +64,8 @@ object AppViewModelProvider {
  * Extension function to queries for [Application] object and returns an instance of
  * [InventoryApplication].
  */
-fun CreationExtras.inventoryApplication(): InventoryApplication =
-    (this[AndroidViewModelFactory.APPLICATION_KEY] as InventoryApplication)
+fun CreationExtras.inventoryApplication(): InventoryApplication {
+    val application = this[AndroidViewModelFactory.APPLICATION_KEY]
+    return application as? InventoryApplication
+        ?: throw IllegalStateException("Application must be an instance of InventoryApplication")
+}
