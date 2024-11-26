@@ -56,7 +56,7 @@ import com.example.inventory.R
 import com.example.inventory.data.Item
 import com.example.inventory.ui.navigation.NavigationDestination
 import rgm34406697.example.InventoryTopAppBar
-import rgm34406697.example.appromm34406697.ui.theme.InventoryTheme
+import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme
 
 object ItemDetailsDestination : NavigationDestination {
     override val route = "item_details"
@@ -233,7 +233,7 @@ private fun DeleteConfirmationDialog(
 @Preview(showBackground = true)
 @Composable
 fun ItemDetailsScreenPreview() {
-    InventoryTheme {
+    AppRomm34406697Theme  {
         ItemDetailsBody(
             ItemDetailsUiState(
                 outOfStock = true,
