@@ -16,6 +16,7 @@
 
 package com.example.inventory.ui.item
 
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.calculateEndPadding
@@ -42,6 +43,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.inventory.R
 import com.example.inventory.ui.navigation.NavigationDestination
+import kotlinx.coroutines.launch
 import rgm34406697.example.InventoryTopAppBar
 import rgm34406697.example.appromm34406697.ui.AppViewModelProvider
 import rgm34406697.example.appromm34406697.ui.theme.AppRomm34406697Theme
@@ -61,6 +63,9 @@ fun ItemEntryScreen(
     canNavigateBack: Boolean = true,
     viewModel: ItemEntryViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
+
+    val coroutineScope = rememberCoroutineScope()
+
     Scaffold(
         topBar = {
             InventoryTopAppBar(
@@ -73,7 +78,11 @@ fun ItemEntryScreen(
         ItemEntryBody(
             itemUiState = viewModel.itemUiState,
             onItemValueChange = viewModel::updateUiState,
-            onSaveClick = { },
+            onSaveClick = { coroutineScope.launch{
+                viewModel.saveItem()
+                navigateBack()
+                     }
+                  },
             modifier = Modifier
                 .padding(
                     start = innerPadding.calculateStartPadding(LocalLayoutDirection.current),
